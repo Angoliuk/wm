@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source "$(dirname "$0")/global.sh"
+CORE_DIR="$(dirname "$(realpath "$0")")"
+source "$CORE_DIR/global.sh"
 
 [ -f "$CONFIG_NAME" ] && throw 0 "Config file already exists: $(pwd)/$CONFIG_NAME"
 

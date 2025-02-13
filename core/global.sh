@@ -10,6 +10,16 @@ CONFIG_NAME="wm-config.yml"
 SCRIPTS_FOLDER_CONFIG_KEY="scriptsFolder"
 DEFAULT_SCRIPTS_FOLDER="tools"
 
+if echo "$OS" | grep -qi "Windows"; then
+  INSTALL_DIR="/usr/local/bin"
+  SOURCE_DIR="$INSTALL_DIR/wm_core"
+  EXECUTABLE_PATH="$INSTALL_DIR/wm"
+else
+  INSTALL_DIR="/usr/local/bin"
+  SOURCE_DIR="$INSTALL_DIR/wm_core"
+  EXECUTABLE_PATH="$INSTALL_DIR/wm"
+fi
+
 throw() {
   local status=${1:-2}
   local message="$2"
