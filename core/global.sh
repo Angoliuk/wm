@@ -16,6 +16,8 @@ if echo "$OS" | grep -qi "Windows"; then
   EXECUTABLE_PATH="$INSTALL_DIR/wm"
 else
   INSTALL_DIR="/usr/local/bin"
+  MAN_DIR=/usr/local/share/man/man1/
+  MAN_PATH=/usr/local/share/man/man1/wm.1
   SOURCE_DIR="$INSTALL_DIR/wm_core"
   EXECUTABLE_PATH="$INSTALL_DIR/wm"
 fi

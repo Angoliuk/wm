@@ -33,6 +33,7 @@ if echo "$OS" | grep -qi "Windows"; then
   bash_profile="$HOME/.bash_profile"
   source "$bash_profile"
 else
+  ln -sf "$SOURCE_DIR"/wm.1 "$MAN_DIR"
   chmod +x "$EXECUTABLE_PATH"
   for file in "$SOURCE_DIR"/*.sh; do
     if [ -f "$file" ]; then

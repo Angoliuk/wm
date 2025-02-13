@@ -1,0 +1,72 @@
+.TH WM 1 "February 2025" "Version 1.0.0" "User Commands"
+.SH NAME
+wm \- A command-line tool for managing scripts and configurations.
+.SH SYNOPSIS
+.B wm
+[\fICOMMAND\fR] [\fIOPTIONS\fR]
+.SH DESCRIPTION
+wm is a CLI utility for managing and executing scripts with various subcommands.
+
+.SH COMMANDS
+.TP
+.B run \fIscript\fR [\fIOPTIONS\fR]
+Runs a script with optional arguments.
+
+.TP
+.B init
+Initializes the wm environment.
+
+.TP
+.B add-script \fIOPTIONS\fR
+Adds a script to the configuration.
+
+.TP
+.B config-scripts
+Configure scripts.
+
+.TP
+.B health
+Checks the wm health.
+
+.TP
+.B rm
+Uninstall wm.
+
+.TP
+.B -v
+Prints the version of wm.
+
+.TP
+.B config-path
+Displays the current configuration path.
+
+.SH EXAMPLES
+Run a script:
+.PP
+.EX
+wm run myscript.sh --flag
+.EE
+
+Initialize the wm environment:
+.PP
+.EX
+wm init
+.EE
+
+List configured scripts:
+.PP
+.EX
+wm config-scripts
+.EE
+
+Check system health:
+.PP
+.EX
+wm health
+.EE
+
+.SH AUTHOR
+Written by Your Name.
+
+.SH SEE ALSO
+man(1)

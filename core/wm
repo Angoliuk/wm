@@ -23,9 +23,7 @@ run() {
 }
 
 commands=("$@")
-
 wm_command="${commands[0]}"
-
 
 case "$wm_command" in
   "run")

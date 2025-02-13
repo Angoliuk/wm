@@ -17,6 +17,10 @@ if [ -f "$EXECUTABLE_PATH" ]; then
   rm "$EXECUTABLE_PATH"
 fi
 
+if [ -f "$MAN_PATH" ]; then
+  rm "$MAN_PATH"
+fi
+
 echo "wm uninstalled!"
 
 cd "$initial_path" || exit
